@@ -1,0 +1,23 @@
+-Multiclass SVM loss
+-Regularization
+  - L1 
+  - L2
+  - Dropout
+-SoftMax loss (Multinomial Loginstic Regression) (cross entropy)
+  -Intuition lecture 3 39:00
+
+-Use intution about loss functions to debug models
+
+-Numerical gradient: using definetion of derivetive
+-Analytic gradient: using calculus
+  -Numeric gradients can be used to debug and test Analytic implementations because they are easy to write
+
+-Gradient Descent
+  -Step size (learning rate) (hyperparameter)
+  -Stochastic Gradient Descent (SGD) (using minibatches)
+  -Demo http://vision.stanford.edu/teaching/cs231n-demos/linear-classify/
+
+-Examples of image features
+  -Color Histogram
+  -HoG (Histogram of Oriented Gradients) // Google it
+  -Bag of Words
