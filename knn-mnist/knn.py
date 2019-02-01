@@ -18,16 +18,20 @@ class KNN:
 
 if __name__ == "__main__":
     mnist = load_mnist.Mnist("./mnist")
-    for k in range(1, 6):
+    train_sz = 5000
+    val_sz = 100
+    # Convert to black and white binary value
+    train_images = (mnist.train_images[:train_sz] > 0) + 0
+    val_images = (mnist.test_images[:val_sz] > 0) + 0
+    val_labels = mnist.test_labels[:val_sz]
+    for k in range(1, 11):
         knn = KNN(k)
-        knn.train(mnist.train_images, mnist.train_labels)
-        test_sz = 50
+        knn.train(train_images, mnist.train_labels)
         cnt_correct = 0
         # TODO: Parallelize testing
-        for idx in range(test_sz):
-            image = mnist.test_images[idx]
-            label = mnist.test_labels[idx]
-            if knn.predict(image) == label:
+        for (image, label) in zip(val_images, val_labels):
+            prediction = knn.predict(image)
+            if prediction == label:
                 cnt_correct += 1
 
-        print("For k={}, acc={}".format(k, cnt_correct / test_sz))
+        print("For k={}, acc={}".format(k, cnt_correct / val_sz))
