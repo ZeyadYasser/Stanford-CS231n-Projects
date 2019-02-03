@@ -1,0 +1,9 @@
+-Back Probagation
+  -Computational graph
+  -Chain Rule
+  -local gradients (slide 27)
+  -Chain Rule multiple outputs (37:17) // Just sum over the upstream gradients
+-Gradients for vectorized code
+  -Jacobian Matrix
+  -Element-Wise Ops produce a diagonal Jacobian Matrix
+  -Example 41:00
