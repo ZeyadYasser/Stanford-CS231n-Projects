@@ -1,0 +1,22 @@
+-ConvNet filters.
+-ConvNet is a sequence of conv layers, interspersed with activation functions (e.g. ReLU).
+-Hierarchical filters (slide 37).
+-Filters applied with stride.
+-Output size after stride: (slide 52)
+    -SZ = (N - F) / stride + 1
+    -N is size of image.
+    -F is size of filter.
+    -SZ should be a whole number.
+-Zero Padding (slide 55).
+-Summary (slide 62).
+-Convolution parameters tips (slide 64).
+-Pooling layer makes teh representation smaller & more manageable.
+    -Max Pooling.
+    -Use strides to avoid overlapping.
+    -Pooling Summary (slide 75).
+-Pooling is like the accumulation of all the processing done by the filters.
+-Fully Connected Layer.
+
+-Typical architechtures.
+    -[(CONV-RELU)*N-POOL]*M-(FC-RELU)*K, SOFTMAX.
+    -N is usually up to ~5m, M is large, 0 <= K <= 2.
