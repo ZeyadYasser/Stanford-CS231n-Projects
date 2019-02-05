@@ -1,0 +1,47 @@
+-Activation Functions
+    -Sigmoid Problems [0, 1]
+        -Saturated neurons kill the gradients near the edges.
+        -Sigmoid is not zero centered.
+        -exp() is expensive.
+    -Tanh
+        -Zero centered [-1, 1].
+        -Also kills the gradient.
+    -ReLU max(0, x)
+        -Does not saturate (in +region).
+        -Very computationally efficient.
+        -Converges much faster than tanh/sigmoid (up to 6x).
+        -Not zero centered.
+        -(-ve) part is dead.
+    -Leaky ReLU max(0.01x, x)
+        -Same as ReLU.
+        -Will not die.
+    -Parametric ReLU max(alpha*x, x)
+        -You can backprop into alpha.
+    -ELU (exp Linear Units).
+-Data Preprocessing
+    -Normalize data (eg. zero centered).
+-Weight Initialization
+    -Small random numbers (works okay for small networks, but is a problem for deep networks).
+    -Xavier initialization.
+        -W = np.random.randn(fan_in, fan_out) / np.sqrt(fan_in).
+        -When used with ReLU account for killing neurons as follows:
+        -W = np.random.randn(fan_in, fan_out) / np.sqrt(fan_in/2).
+-Batch Normalization
+    -Compute mean & variance for each dimension(feature).
+    -Normalization is a differentiable function.
+        -(x - E[x]) / sqrt(Var[x])
+    -Insert after FC or Conv Layyers and before nonlinearity.
+    -Allow network to squach range if it wants. (slide 58)
+    -It improves gradient flow.
+    -Allows for higher learning rates.
+    -Reduces strong dependence on initialization.
+    -Acts as a form of regularization.
+    -At test time BN Layer function differently. (slide 60)
+-Babysitting
+    -Sanity checks
+        -Check that loss is reasonable.
+        -Use a very small sample ~20 which the network should overfit (accuracy 100%)
+    -Training
+        -Start with small regularization and find learning rate that makes loss go down.
+        -Rough range for learning rate [1e-3, 1e-5].
+-Hyperparameter Optimization

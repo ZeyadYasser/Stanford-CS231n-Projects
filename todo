@@ -1,1 +1,2 @@
-- Make a 2-layer NN in numpy.
+- (DONE) Make a 2-layer NN in numpy.
+- (DONE) Look into Batch Normalization for Conv Layers
