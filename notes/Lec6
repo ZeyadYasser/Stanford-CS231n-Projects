@@ -39,7 +39,7 @@
     -At test time BN Layer function differently. (slide 60)
 -Babysitting
     -Sanity checks
-        -Check that loss is reasonable.
+        -Check that loss is reasonable. // Tried this in Pytorch (✔✔✔ NOICE)
         -Use a very small sample ~20 which the network should overfit (accuracy 100%)
     -Training
         -Start with small regularization and find learning rate that makes loss go down.

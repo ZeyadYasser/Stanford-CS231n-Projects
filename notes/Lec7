@@ -1,0 +1,34 @@
+-SGD Problems
+    -Local minima & Saddle points.
+    -Saddle points are more common in high dimensions.
+-SGD + Momentum
+    -Nestrov Momentum
+-AdaGrad
+    -RMSProp // Aims at equal progress in all dimensions.
+-Adam
+    -A mix of Momentum & RMSProp
+    -Adam with beta1 = 0.9, beta2 = 0.999 & learning_rate = [1e-3, 5e-4] is a good starting point for many models.
+
+-Learning rate decay
+    -Step decay (maybe half every few epochs)
+    -Exp decay (lr = lr*e^-kt)
+    -1/t decay (lr = lr/(1+kt))
+    -critical with SGD+Momentum, less common with Adam.
+
+-Model Ensembles (maybe 2% improvement)
+    -Instead of training independent models, use multiple snapshots of a single model during training.
+    -Polyak averages (Tips n Tricks).
+
+-Regularization
+    -Dropout. (slide 70-71)
+    -Dropout at test time. (multiply output of the layer by the probabilty).
+    -BatchNorm
+    -Data augmentation
+        -Horizontal Flips.
+        -Random crops & scales (slide 78).
+        -Color Jitter.
+    -Fractional Max Pooling (not commonly used)
+
+-Transfer Learning (slide 90).
+    -If you have a small dataset, train on a similar bigger dataset then fine tune for your dataset.
+    -Pretrained CNNs are usualy used as blocks for other networks.
