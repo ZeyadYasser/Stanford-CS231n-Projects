@@ -1,0 +1,8 @@
+PyTorch examples are a bit outdated in the lecture slides.
+This is an alternative walkthrough: 
+    https://github.com/jcjohnson/pytorch-examples
+
+-Pytorch DataLoaders
+-Pytorch Pretrained Models
+
+-Static vs Dynamic Computational Graphs
