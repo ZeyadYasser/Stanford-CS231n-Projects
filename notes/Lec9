@@ -1,0 +1,27 @@
+CNN Architectures
+-AlexNet (8 layers)
+-VGGNET
+    -16~19 layers
+    -smaller filters 3x3
+-GoogLeNet
+    -Deeper with more efficiency
+    -"Inception" module
+        -Multiple filter receptive field sizes (1x1, 3x3, 5x5) + (3x3 pool)
+        -Concatenate all filter output depth-wise
+        -dimension reduction with 1x1 filters["bottleneck layers"] (slide 53)
+        -"bottleneck" layers reduce computation needed
+        -Stem Network + Stacked Inception Modules + Classifier output (slide 57)
+        -Auxiliary outputs to inject additionl gradients at lower layers (slide 61)
+    -12x less params than AlexNet
+-ResNet
+    -Simple deep CNNs performance decrease 
+    -Residual blocks (slide 72)
+    -It is learning a delta (modifiction) to the input instead of learing the representation from scratch
+    -Stack Residual blocks, every Residual block has 2 3x3 conv layers
+    -Periodically double # of filters and downsample spatially using stride 2
+    -Use "bottleneck layers" to improve efficiency like GoogLeNet
+    -Hyperparams (slide 80)
+    -Better than human performance
+-Wide Residual Networks
+-SqueezeNet
+-Trend towards skip connections to improve gradient flow
