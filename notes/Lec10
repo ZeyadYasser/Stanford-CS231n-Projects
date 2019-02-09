@@ -1,0 +1,13 @@
+-Recurrent Neural Network
+    -new state as a function of old state and input
+    -output produced from current state (slide 22)
+    -Nice visualiztion (slide 25)
+    -Reuse the same weight matrix at every step
+    -Seq to Seq (slide 33)
+    -Truncated Backprobagation through time
+    -Charchter level RNN sample https://gist.github.com/karpathy/d4dee566867f8291f086
+-Image Captioning (slide 64)
+-Image Captioning with Attention (slide 84)
+-Multilayer RNNs (slide 89)
+-LSTM (slide 97)
+-Summary (104)
