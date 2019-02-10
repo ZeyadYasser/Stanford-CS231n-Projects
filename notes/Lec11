@@ -1,0 +1,20 @@
+-Semantic Segmentation
+    -Sliding Window (Naive, Very Inefficient)
+    -Fully Convolutional
+    -Downsampling & upsampling inside the network for efficiency
+    -Nearest Neighbour upsampling, Bed of Nails, Max Unpooling
+    -Learnable upsampling: Transpose Convolution
+-Classification + Localization
+    -Output class scores & box coordinates (slide 47)
+    -Weighted sum of two losses (scores & box coordinates)
+    -Human Pose Estimation (slide 51)
+-Object Detection
+    -Region Proposals (selective search)
+    -R-CNN
+    -Fast R-CNN
+    -Faster R-CNN
+    -YOLO (One forward pass)
+    -SSD
+-Instance Segmentation
+    -Mask R-CNN (Also does Pose Estimation)
+-COCO Dataset
